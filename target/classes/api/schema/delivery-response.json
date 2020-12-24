@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "maxLength": 20
+      
+    },
+    "returnCode": {
+      "type": "integer",
+      "maxLength": 8
+    },
+    "returnMsg": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "reservationID": {
+              "type": "integer"
+            },
+            "transNum": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "reservationID",
+            "transNum"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "state",
+    "code",
+    "msg",
+    "data"
+  ]
+}

@@ -1,0 +1,10 @@
+appointmentID: "45612347897"
+orderID: "OD20200910"
+remark: ""
+orderItem:
+  - orderItemNo: "1"
+    itemCode: "2088431"
+    quantity: "2"
+    serials:
+      - sequence: "1"
+        serial: "so01"

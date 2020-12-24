@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "appointmentID": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "orderID": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "remark": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "orderItem": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "orderItemNo": {
+              "type": "integer",
+              "minLength": 1,
+              "maxLength": 16
+            },
+            "itemCode": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 20
+            },
+            "quantity": {
+              "type": "integer",
+              "minLength": 1,
+              "maxLength": 16
+            },
+            "serials": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "object",
+                  "properties": {
+                    "sequence": {
+                      "type": "integer",
+                      "minLength": 1,
+      				  "maxLength": 16
+                    },
+                    "serial": {
+                      "type": "string",
+                      "minLength": 1,
+                      "maxLength": 20
+                    }
+                  },
+                  "required": [
+                    "sequence",
+                    "serial"
+                  ]
+                }
+              ]
+            }
+          },
+          "required": [
+            "orderItemNo",
+            "itemCode",
+            "quantity",
+            "serials"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "appointmentID",
+    "orderID",
+    "orderItem"
+  ]
+}

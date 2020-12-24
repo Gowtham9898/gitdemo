@@ -1,0 +1,64 @@
+#%RAML 1.0
+title: Ruby COM API
+version: v1
+#baseuri: http://localhost:8081/api/
+
+types:         
+  SerialNumRequest: 
+    type: !include schema/delivery-update-serial-number-request.json
+  
+  DeliveryStatusRequest:
+    type: !include schema/delivery-status-update-request.json
+  
+  MessageResponse: 
+    type: !include schema/delivery-response.json
+    
+/serial_number/update:
+  put:
+        displayName: Update Serial Number of Delivery Items
+        body:
+          application/json:
+            type: SerialNumRequest
+            example: !include examples/update-serial-number-request.json
+              
+        responses:
+          200:
+            body:
+              application/json:
+                type: MessageResponse
+                example: !include examples/delivery-success-response.json
+          400:
+            body:
+              application/json:
+                type: MessageResponse
+                example: !include examples/delivery-error-response.json
+          404:
+            body:
+              application/json:
+                type: MessageResponse
+                example: !include examples/delivery-error-response.json
+
+/delivery_status/update:
+  put:
+        displayName: Update Delivery Status
+        body:
+          application/json:
+            type: DeliveryStatusRequest
+            example: !include examples/update-status-request.json
+              
+        responses:
+          200:
+            body:
+              application/json:
+                type: MessageResponse
+                example: !include examples/delivery-success-response.json
+          400:
+            body:
+              application/json:
+                type: !include schema/delivery-response.json
+                example: !include examples/delivery-error-response.json
+          404:
+            body:
+              application/json:
+                type: !include schema/delivery-response.json
+                example: !include examples/delivery-error-response.json

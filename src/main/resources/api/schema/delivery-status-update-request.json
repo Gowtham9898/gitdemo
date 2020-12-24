@@ -1,0 +1,31 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "appointmentID": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "orderID": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 20
+    },
+    "deliveryStatus": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10
+    },
+    "remark": {
+      "type": "string",
+      "minLength": 1,      
+      "maxLength": 80
+    }
+  },
+  "required": [
+    "appointmentID",
+    "orderID",
+    "deliveryStatus"  
+  ]
+}

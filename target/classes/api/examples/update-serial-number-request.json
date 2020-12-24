@@ -1,0 +1,20 @@
+{ 
+"appointmentID":"45612347897",
+"orderID":"OD20200910",
+"remark":" ",
+"orderItem":[
+	{
+		"orderItemNo":2,
+		"itemCode":"2088431",
+		"quantity":2,
+		"serials":[
+			{
+				"sequence":1,
+				"serial":"so01"
+			},
+			{
+				"sequence":2,
+				"serial":"so02"
+			}]
+}]
+}

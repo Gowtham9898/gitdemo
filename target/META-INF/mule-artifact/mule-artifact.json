@@ -1,0 +1,40 @@
+{
+  "configs": [
+    "process-com-mea-order-fulfillment-api-dev.xml",
+    "global.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mycompany:com-mea-order-fulfillment:1.0.0-SNAPSHOT",
+  "minMuleVersion": "4.3.0",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "api/com-mea-api-order-fulfillment.raml",
+        "api/examples/delivery-error-response.json",
+        "api/examples/delivery-success-response.json",
+        "api/examples/delivery-update-delivery-status-request.yaml",
+        "api/examples/delivery-update-error-message-response.yaml",
+        "api/examples/delivery-update-serial-number-request.yaml",
+        "api/examples/delivery-update-success-message-response.yaml",
+        "api/examples/update-serial-number-request.json",
+        "api/examples/update-status-request.json",
+        "api/schema/delivery-response.json",
+        "api/schema/delivery-status-update-request.json",
+        "api/schema/delivery-update-serial-number-request.json",
+        "application-types.xml",
+        "dev.properties",
+        "global.xml",
+        "log4j2.xml",
+        "process-com-mea-order-fulfillment-api-dev.xml"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}
