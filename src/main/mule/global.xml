@@ -12,5 +12,6 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
     </http:listener-config>
     <apikit:config name="com-mea-api-order-fulfillment-config" api="com-mea-api-order-fulfillment.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
 	<configuration-properties doc:name="Configuration properties" doc:id="73adede4-3ff0-46b3-beb7-8640b9914510" file="${env}.properties" />
+	<global-property doc:name="Global Property" doc:id="0707566c-ce7f-4d0c-ba82-bf089386165c" name="env" value="dev" />
     
 </mule>

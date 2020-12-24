@@ -9,6 +9,9 @@
 
 	<name>com-mea-api-order-fulfillment</name>
 
+
+
+
     <properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -30,12 +33,21 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-				<classifier>mule-application</classifier>
+
+	<cloudHubDeployment>
+		<objectStoreV2>true</objectStoreV2>
+		<username>gowtham123</username>
+		<password>Nani1234</password>
+		<workers>1</workers>
+		<workerType>Micro</workerType>
+		<environment>Sandbox</environment>
+		<muleVersion>4.3.0</muleVersion>
+		<applicationName>Demoapplicationgowtham123</applicationName>
+	</cloudHubDeployment>
                 </configuration>
 			</plugin>
 		</plugins>
 	</build>
-
 	<dependencies>
         <dependency>
             <groupId>org.mule.connectors</groupId>
