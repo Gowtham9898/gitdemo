@@ -42,7 +42,7 @@
 		<workerType>Micro</workerType>
 		<environment>Sandbox</environment>
 		<muleVersion>4.3.0</muleVersion>
-		<applicationName>Demo-application-gowtham123</applicationName>
+		<applicationName>Demoapplicationgowtham123</applicationName>
 	</cloudHubDeployment>
                 </configuration>
 			</plugin>
